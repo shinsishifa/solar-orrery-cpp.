@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cosmos Vision: Interactive Orrery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app-container">
+    <div class="control-panel">
+      <h1>Cosmos Vision</h1>
+      
+      <div class="control-group">
+        <label>Orbit Speed <span id="speedVal">1.0x</span></label>
+        <input type="range" id="speedSlider" min="0" max="5" step="0.1" value="1.0" />
+      </div>
+
+      <div class="control-group">
+        <label>Time Presets</label>
+        <div class="btn-grid">
+          <button class="btn" onclick="setSpeed(0)">Pause</button>
+          <button class="btn" onclick="setSpeed(1)">Normal</button>
+          <button class="btn" onclick="setSpeed(3)">Fast</button>
+          <button class="btn" onclick="setSpeed(10)">Warp</button>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="cosmosCanvas"></canvas>
+
+    <div class="info-card">
+      <h2 id="planetTitle">Earth</h2>
+      <p id="planetDesc">Our home planet—the only astronomical object known to harbor life and liquid surface water.</p>
+      <div id="planetStats" class="info-stats">Distance: 149.6M km | Orbit: 365.25 days</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
